@@ -2,7 +2,7 @@ name: Git action
 on: push
 jobs:
     First-job:
-        run-on: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: print welcom
               run: echo"welcome sir in ${{ runner.os }} doing ${{ github.event_name }}"
