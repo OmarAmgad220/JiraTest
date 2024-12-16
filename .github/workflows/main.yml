@@ -1,0 +1,10 @@
+name: try2
+on: pull_request
+jobs:
+    hello:
+        runs-on: ubuntu-latest
+        steps:
+            - name: hell1
+              run: ls ${{github.worksapce}}
+            - name: download
+              uses: actions/checkout@v4
