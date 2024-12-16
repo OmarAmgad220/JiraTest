@@ -2,12 +2,12 @@ name: Git action
 on: push
 jobs:
     First-job:
-        run-on: ubuntu-latest
+        runs-on: ubuntu-latest
         steps:
             - name: print welcome
-            run: echo "welcome sir in ${{ runner.os }} doing ${{ github.event_name }}"
+              run: echo " welcome sir in ${{ runner.os }} doing ${{ github.event_name }} "
             - name: Check out repository code action
-            run: actions/checkout@v4
+              uses: actions/checkout@v4
             - run: echo " Cloning The ${{ github.repository }} repository "
             - name: List files in the repository
               run: ls ${{ github.workspace }}
